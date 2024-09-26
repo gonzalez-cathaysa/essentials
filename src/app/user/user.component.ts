@@ -12,8 +12,12 @@ const randomIndex = Math.floor(Math.random() * DUMMY_USERS.length);
 })
 export class UserComponent {
   //Property settable from outside
-  @Input() avatar!:string;
-  @Input() name!: string;
+  // @Input() avatar!:string;
+  // @Input() name!: string;
+
+  @Input({required: true}) avatar!:string;
+  @Input({required: true}) name!: string;
+
   // selectedUser = signal(DUMMY_USERS[randomIndex]);
   // imagePath=computed(()=>'assets/users/'+this.selectedUser().avatar)
   // // get imagePath(){
