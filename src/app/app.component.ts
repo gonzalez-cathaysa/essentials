@@ -19,7 +19,7 @@ export class AppComponent {
   title = 'essentials';
   //We set users as a subset of users
   users = DUMMY_USERS;
-  selectedUserId = 'u1';
+  selectedUserId?: string;
 
   get selectedUser() {
     return this.users.find((user) => user.id === this.selectedUserId)!;
