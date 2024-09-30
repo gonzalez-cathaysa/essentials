@@ -17,7 +17,7 @@ import { TasksComponent } from './tasks/tasks.component';
 })
 export class AppComponent {
   title = 'essentials';
-  //We set users as a subset of users
+
   users = DUMMY_USERS;
   selectedUserId?: string;
 
