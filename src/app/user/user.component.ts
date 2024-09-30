@@ -8,6 +8,8 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
   styleUrl: './user.component.css',
 })
 export class UserComponent {
+  //We have to add those exclamation marks here to rule out 
+  //the possibility of possibly having an undefined value
   @Input({ required: true }) id!: string;
   @Input({ required: true }) avatar!: string;
   @Input({ required: true }) name!: string;

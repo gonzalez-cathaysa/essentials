@@ -14,10 +14,14 @@ import { TasksComponent } from './tasks/tasks.component';
 })
 export class AppComponent {
   title = 'essentials';
+  //We set users as a subset of users
   users = DUMMY_USERS;
   selectedUserId = 'u1';
 
   get selectedUser() {
+    //If we don't use ! we obtain undefined and we will run on an error in app-tasks [name]="selectedUser.name
+    //Maybe we have the situation where we don't find an user id, I should be careful adding ! Instead in situations
+    //where you maybe can't be 100% that you will have a value it's often better to ser up some fallback code
     return this.users.find((user) => user.id === this.selectedUserId)!;
   }
 
