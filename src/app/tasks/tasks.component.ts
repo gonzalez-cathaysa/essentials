@@ -12,7 +12,7 @@ import { NewTaskComponent } from './new-task/new-task.component';
 export class TasksComponent {
   @Input({ required: true }) userId!: string;
   @Input({ required: true }) name!: string;
-  isAddingTask = false;
+
   tasks = [
     {
       id: 't1',
@@ -39,6 +39,8 @@ export class TasksComponent {
     },
   ];
 
+
+
   get selectedUserTasks() {
     return this.tasks.filter((task) => task.userId === this.userId);
   }
@@ -47,7 +49,12 @@ export class TasksComponent {
     this.tasks = this.tasks.filter((task) => task.id !== id);
   }
 
+  isAddingTask = false;
+
   onStartAddTask() {
     this.isAddingTask = true;
+  }
+  onCancelAddTask() {
+    this.isAddingTask = false;
   }
 }
