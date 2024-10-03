@@ -22,7 +22,7 @@ export class AppComponent {
   selectedUserId?: string;
 
   get selectedUser() {
-    return this.users.find((user) => user.id === this.selectedUserId)!;
+    return this.users.find((user) => user.id === this.selectedUserId);
   }
 
   onSelectUser(id: string) {
