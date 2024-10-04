@@ -14,16 +14,13 @@ import { TasksService } from './tasks.service';
 export class TasksComponent {
   @Input({ required: true }) userId!: string;
   @Input({ required: true }) name!: string;
+  isAddingTask = false;
 
   constructor(private tasksService: TasksService) {}
 
   get selectedUserTasks() {
     return this.tasksService.getUserTasks(this.userId);
   }
-
-  onCompleteTask(id: string) {}
-
-  isAddingTask = false;
 
   onStartAddTask() {
     this.isAddingTask = true;

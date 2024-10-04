@@ -20,7 +20,6 @@ import { TasksService } from '../tasks.service';
 export class NewTaskComponent {
   @Input({ required: true }) userId!: string;
   @Output() close = new EventEmitter<void>();
-  @Output() add = new EventEmitter<NewTaskData>();
   enteredTitle = '';
   enteredSummary = '';
   enteredDate = '';

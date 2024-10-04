@@ -13,8 +13,7 @@ import { TasksService } from '../tasks.service';
     imports: [CardComponent, DatePipe]
 })
 export class TaskComponent {
-  @Input({ required: true }) task!: Task;
-  @Output() complete = new EventEmitter<string>();
+  @Input({required: true}) task!: Task;
   private tasksService = inject(TasksService);
 
   onCompleteTask(){
